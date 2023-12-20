@@ -54,13 +54,13 @@ RUN wget -O paperless.tar.xz https://github.com/paperless-ngx/paperless-ngx/rele
 
 # Fix aarch64 builds
 # see: https://github.com/pikepdf/pikepdf/issues/194#issuecomment-1020419586
-RUN wget -O qpdf.tar.gz https://github.com/qpdf/qpdf/releases/download/release-qpdf-10.6.3/qpdf-10.6.3.tar.gz \
-    && tar zxf qpdf.tar.gz \
-    && mv qpdf-10.6.3 qpdf \
-    && ls -lah \
-    && cd /qpdf \
-    && ./configure \
-    && make
+# RUN wget -O qpdf.tar.gz https://github.com/qpdf/qpdf/releases/download/release-qpdf-10.6.3/qpdf-10.6.3.tar.gz \
+#     && tar zxf qpdf.tar.gz \
+#     && mv qpdf-10.6.3 qpdf \
+#     && ls -lah \
+#     && cd /qpdf \
+#     && ./configure \
+#     && make
 
 WORKDIR /usr/src/paperless-ngx/
 
